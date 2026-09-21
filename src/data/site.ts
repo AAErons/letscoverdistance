@@ -44,3 +44,7 @@ export const meetingMapsUrl =
 export const posterUrl = "/images/october-poster.png";
 
 export const tbaLabel = "Details to be announced";
+
+export const stravaUrl = "https://www.strava.com/clubs/2210960";
+
+export const instagramUrl = "https://www.instagram.com/letscoverdistance/";

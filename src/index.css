@@ -251,6 +251,78 @@ h2 span {
   padding-bottom: 56px;
 }
 
+.loop-section {
+  padding-bottom: 40px;
+}
+
+.loop-section h2 {
+  font-size: 32px;
+  margin: 0 0 16px;
+}
+
+.loop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.loop-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 0;
+  padding: 16px 18px;
+  border: 1px solid #25271f45;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.loop-card.is-strava {
+  background: color-mix(in srgb, var(--pink) 14%, var(--paper));
+}
+
+.loop-card.is-instagram {
+  background: color-mix(in srgb, var(--purple) 14%, var(--paper));
+}
+
+.loop-card.is-strava:hover {
+  background: color-mix(in srgb, var(--pink) 26%, var(--paper));
+}
+
+.loop-card.is-instagram:hover {
+  background: color-mix(in srgb, var(--purple) 26%, var(--paper));
+}
+
+.loop-card:focus-visible {
+  outline-offset: 3px;
+}
+
+.loop-copy {
+  min-width: 0;
+}
+
+.loop-card h3 {
+  font: 700 20px / 1.2 "Barlow Condensed", sans-serif;
+  margin: 0 0 6px;
+}
+
+.loop-card h3 span {
+  margin-left: 6px;
+  font-size: 15px;
+}
+
+.loop-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #4a463c;
+}
+
+.loop-doodle {
+  margin-top: 2px;
+}
+
 .week-days {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -579,6 +651,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
   padding-block: 29px 34px;
   font-size: 12px;
@@ -589,9 +662,18 @@ footer p {
   letter-spacing: 0.4px;
 }
 
-footer p span {
-  color: #b84f34;
-  margin-left: 5px;
+.footer-links {
+  display: flex;
+  gap: 16px;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  color: #655397;
+}
+
+.footer-links a:focus-visible {
+  outline-offset: 3px;
 }
 
 .header a:hover {
@@ -765,6 +847,14 @@ footer p span {
     display: flex;
   }
 
+  .loop-section h2 {
+    font-size: 28px;
+  }
+
+  .loop-grid {
+    grid-template-columns: 1fr;
+  }
+
   footer {
     font-size: 11px;
     gap: 12px;
@@ -817,6 +907,10 @@ footer p span {
 
 .line-doodle {
   --size: 20px;
+}
+
+.loop-doodle {
+  --size: 32px;
 }
 
 .heading-doodles {
@@ -905,6 +999,10 @@ footer p {
 
   .cal-doodle {
     --size: 20px;
+  }
+
+  .loop-doodle {
+    --size: 28px;
   }
 
   .heading-accent {
